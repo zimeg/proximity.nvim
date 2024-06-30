@@ -15,6 +15,7 @@ to [Semantic Versioning][semver].
 
 - The MIT license was assigned upon creation of this project and contained code.
 - This CHANGELOG was started with initial entries as the repo is being created.
+- Some notes were left for maintaining repositiories and related contributions.
 
 <!-- a collection of links -->
 
