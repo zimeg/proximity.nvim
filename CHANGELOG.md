@@ -11,6 +11,10 @@ to [Semantic Versioning][semver].
 
 - Find files in near proximities fast with targets that map combos to paths.
 
+### Fixed
+
+- Requirements for options during setup are no longer expected in the types.
+
 ### Maintenance
 
 - The MIT license was assigned upon creation of this project and contained code.

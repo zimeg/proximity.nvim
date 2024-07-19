@@ -1,7 +1,7 @@
 ---Outlines for the contents of this program
 ---@class Proximity
 ---@field options ProximityOptions
----@field setup fun(opts: ProximityOptions)
+---@field setup fun(opts?: ProximityOptions)
 
 ---Default and provided configurations
 ---@class ProximityOptions
