@@ -21,6 +21,7 @@ to [Semantic Versioning][semver].
 - This CHANGELOG was started with initial entries as the repo is being created.
 - Some notes were left for maintaining repositiories and related contributions.
 - Confirmation in setup for this plugin was gathered with a nice new test suite.
+- Perform that same test suite when changes are made to this remote repository.
 
 <!-- a collection of links -->
 
