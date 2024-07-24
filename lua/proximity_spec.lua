@@ -12,7 +12,7 @@ describe("proximity", function()
 	it("has default targets if no options are provided", function()
 		vim.keymap.set = spy.new(function() end)
 
-		local plugin = require("proximity")
+		local plugin = require("./lua/proximity")
 		plugin.setup()
 
 		assert.spy(vim.keymap.set).was_called_with("n", "<leader>pc", _, _)
@@ -22,7 +22,7 @@ describe("proximity", function()
 	it("overrides targets with provided configurations", function()
 		vim.keymap.set = spy.new()
 
-		local plugin = require("proximity")
+		local plugin = require("./lua/proximity")
 		plugin.setup({
 			targets = {
 				["<leader>pm"] = { "MAINTAINERS_GUIDE.md" },
