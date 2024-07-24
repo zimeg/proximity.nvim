@@ -18,3 +18,15 @@ Update the import if needed:
 - local proximity = require("proximity")
 + local proximity = require("proximity.proximity")
 ```
+
+## Testing the tests
+
+Specs near the code can be tried some for confidence:
+
+```sh
+$ make test
+```
+
+The [`busted`][busted] testing tool helps `make`.
+
+[busted]: https://github.com/lunarmodules/busted
