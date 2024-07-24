@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Jumps to the right place
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+jobs:
+  test:
+    name: Maps the right tested files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install a flaked Nix
+        uses: DeterminateSystems/nix-installer-action@v13
+      - name: Run tests
+        run: nix develop -c make test
