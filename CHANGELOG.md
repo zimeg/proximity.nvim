@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog][changelog], and this project adheres
 to [Semantic Versioning][semver].
 
-## [Unreleased]
+## [0.1.0] - 2024-08-04
 
 ### Added
 
@@ -31,4 +31,5 @@ to [Semantic Versioning][semver].
 
 <!-- a collection of releases -->
 
-[Unreleased]: https://github.com/zimeg/proximity.nvim
+[Unreleased]: https://github.com/zimeg/proximity.nvim/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/zimeg/proximity.nvim/releases/tag/v0.1.0
