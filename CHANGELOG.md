@@ -22,6 +22,7 @@ to [Semantic Versioning][semver].
 - Some notes were left for maintaining repositiories and related contributions.
 - Confirmation in setup for this plugin was gathered with a nice new test suite.
 - Perform that same test suite when changes are made to this remote repository.
+- Documents of standard practice for tagging a new release is noted maintenance.
 
 <!-- a collection of links -->
 
