@@ -1,2 +1,5 @@
 # Environment leftovers
 .direnv
+
+# Build artifacts
+result
