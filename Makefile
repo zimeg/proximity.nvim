@@ -1,3 +1,3 @@
 .PHONY: test
 test:
-	nvim --headless --noplugin -es -u lua/proximity_spec.lua
+	nvim --headless --noplugin -es -u test/proximity_spec.lua
