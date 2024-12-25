@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog][changelog], and this project adheres
 to [Semantic Versioning][semver].
 
+## [Unreleased]
+
+### Fixed
+
+- Separate tests from packaged plugin to differentiate runtime dependencies.
+
 ## [0.1.0] - 2024-08-04
 
 ### Added
