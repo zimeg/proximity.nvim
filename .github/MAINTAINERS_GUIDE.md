@@ -36,7 +36,7 @@ The [`busted`][busted] testing tool helps `make`.
 Tagging versions mark stable places of use:
 
 1. Add the new version header to the `CHANGELOG.md` to mark the release.
-2. Update the version numbers the end of `CHANGELOG.md` and `flake.nix`.
+2. Update the version links towards the end of the `CHANGELOG.md`.
 3. Commit these changes to a branch called by the version name – e.g. `v1.2.3`
 4. Open then merge a pull request with these changes
 5. Draft a [new release][releases] using the version name and entries from the

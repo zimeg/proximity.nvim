@@ -22,7 +22,7 @@
           proximity-nvim = pkgs.vimUtils.buildVimPlugin {
             name = "proximity.nvim";
             src = ./.;
-            version = "0.1.0";
+            version = "unversioned";
             propogatedBuildInputs = with pkgs; [
               luajit
             ];
