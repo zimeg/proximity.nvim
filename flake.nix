@@ -19,7 +19,7 @@
           ];
         };
         packages = {
-          proximity-nvim = pkgs.vimUtils.buildVimPlugin {
+          default = pkgs.vimUtils.buildVimPlugin {
             name = "proximity.nvim";
             src = ./.;
             version = "unversioned";
