@@ -20,7 +20,7 @@
         };
         packages = {
           default = pkgs.vimUtils.buildVimPlugin {
-            name = "proximity.nvim";
+            name = "proximity-nvim";
             src = ./.;
             version = "unversioned";
             propogatedBuildInputs = with pkgs; [
