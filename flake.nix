@@ -18,9 +18,6 @@
             neovim
           ];
         };
-        overlays.default = final: prev: {
-          inherit (self.packages.${prev.system}) default;
-        };
         packages = {
           default = pkgs.vimUtils.buildVimPlugin {
             name = "proximity.nvim";
@@ -31,5 +28,11 @@
             ];
           };
         };
-      });
+      })
+    //
+      {
+        overlays.default = final: prev: {
+          inherit (self.packages.${prev.system}) default;
+        };
+      };
 }
