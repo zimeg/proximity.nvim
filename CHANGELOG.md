@@ -9,7 +9,7 @@ to [Semantic Versioning][semver].
 
 ### Maintenance
 
-- Require changes to the changelog before merging changes of development.
+- Require changes to the changelog before merging changes after development.
 
 ## [0.1.1] - 2024-12-29
 
