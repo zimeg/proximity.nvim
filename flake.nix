@@ -4,7 +4,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
-  outputs = { nixpkgs, flake-utils, ... }:
+  outputs = { nixpkgs, flake-utils, self, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
@@ -18,5 +18,21 @@
             neovim
           ];
         };
-      });
+        packages = {
+          default = pkgs.vimUtils.buildVimPlugin {
+            name = "proximity-nvim";
+            src = ./.;
+            version = "unversioned";
+            propogatedBuildInputs = with pkgs; [
+              luajit
+            ];
+          };
+        };
+      })
+    //
+      {
+        overlays.default = final: prev: {
+          inherit (self.packages.${prev.system}) default;
+        };
+      };
 }
