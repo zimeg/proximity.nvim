@@ -7,6 +7,12 @@ to [Semantic Versioning][semver].
 
 ## [Unreleased]
 
+### Maintenance
+
+- Require changes to the changelog before merging changes after development.
+
+## [0.1.1] - 2024-12-29
+
 ### Fixed
 
 - Separate tests from packaged plugin to differentiate runtime dependencies.
@@ -41,5 +47,6 @@ to [Semantic Versioning][semver].
 
 <!-- a collection of releases -->
 
-[Unreleased]: https://github.com/zimeg/proximity.nvim/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/zimeg/proximity.nvim/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/zimeg/proximity.nvim/compare/v0.1.0...v1.1.1
 [0.1.0]: https://github.com/zimeg/proximity.nvim/releases/tag/v0.1.0
