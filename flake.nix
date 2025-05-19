@@ -2,21 +2,22 @@
   description = "some dependencies for fast movement";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
   };
   outputs =
+    { nixpkgs, ... }:
+    let
+      each =
+        function:
+        nixpkgs.lib.genAttrs [
+          "x86_64-darwin"
+          "x86_64-linux"
+          "aarch64-darwin"
+          "aarch64-linux"
+        ] (system: function nixpkgs.legacyPackages.${system});
+    in
     {
-      nixpkgs,
-      flake-utils,
-      ...
-    }:
-    flake-utils.lib.eachDefaultSystem (
-      system:
-      let
-        pkgs = nixpkgs.legacyPackages.${system};
-      in
-      {
-        devShells.default = pkgs.mkShell {
+      devShells = each (pkgs: {
+        default = pkgs.mkShell {
           packages = with pkgs; [
             gnumake
             luajit
@@ -24,13 +25,13 @@
             neovim
           ];
         };
-        packages = {
-          default = pkgs.vimUtils.buildVimPlugin {
-            name = "proximity.nvim";
-            src = ./.;
-            version = "unversioned";
-          };
+      });
+      packages = each (pkgs: {
+        default = pkgs.vimUtils.buildVimPlugin {
+          name = "proximity.nvim";
+          src = ./.;
+          version = "unversioned";
         };
-      }
-    );
+      });
+    };
 }
