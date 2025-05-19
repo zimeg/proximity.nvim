@@ -14,6 +14,7 @@ to [Semantic Versioning][semver].
 - Remove flake utilities from build inputs for a more minimal configuration.
 - Set stable versions of workflow steps with the minimum set of permissions.
 - Update packages of dependencies on a frequent schedule for confident tests.
+- Start tests on a whim with a workflow dispatch option with testing events.
 
 ## [0.1.1] - 2024-12-29
 
