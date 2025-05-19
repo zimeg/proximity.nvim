@@ -10,16 +10,14 @@ to [Semantic Versioning][semver].
 ### Maintenance
 
 - Require changes to the changelog before merging changes after development.
+- Include the packaged plugin as part of the flake package derivation output.
+- Remove flake utilities from build inputs for a more minimal configuration.
 
 ## [0.1.1] - 2024-12-29
 
 ### Fixed
 
 - Separate tests from packaged plugin to differentiate runtime dependencies.
-
-### Maintenance
-
-- Include the packaged plugin as part of the flake package derivation output.
 
 ## [0.1.0] - 2024-08-04
 
