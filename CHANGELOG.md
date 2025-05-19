@@ -17,6 +17,10 @@ to [Semantic Versioning][semver].
 
 - Separate tests from packaged plugin to differentiate runtime dependencies.
 
+### Maintenance
+
+- Include the packaged plugin as part of the flake package derivation output.
+
 ## [0.1.0] - 2024-08-04
 
 ### Added
