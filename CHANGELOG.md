@@ -12,6 +12,7 @@ to [Semantic Versioning][semver].
 - Require changes to the changelog before merging changes after development.
 - Include the packaged plugin as part of the flake package derivation output.
 - Remove flake utilities from build inputs for a more minimal configuration.
+- Set stable versions of workflow steps with the minimum set of permissions.
 
 ## [0.1.1] - 2024-12-29
 
