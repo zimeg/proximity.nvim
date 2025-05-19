@@ -18,6 +18,6 @@ jobs:
         with:
           persist-credentials: false
       - name: Install a flaked Nix
-        uses: DeterminateSystems/nix-installer-action@ab6bcb2d5af0e904d04aea750e2089e9dc4cbfdd # v13
+        uses: DeterminateSystems/nix-installer-action@21a544727d0c62386e78b4befe52d19ad12692e3 # v17
       - name: Run tests
         run: nix develop -c make test
