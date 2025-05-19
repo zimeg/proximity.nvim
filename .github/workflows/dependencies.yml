@@ -49,7 +49,7 @@ jobs:
         uses: lewagon/wait-on-check-action@ccfb013c15c8afb7bf2b7c028fb74dc5a068cccc # v1.3.4
         with:
           allowed-conclusions: success
-          check-name: "Report"
+          check-name: "Maps the right tested files"
           ref: ${{ github.head_ref }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 10
@@ -125,7 +125,7 @@ jobs:
         uses: lewagon/wait-on-check-action@ccfb013c15c8afb7bf2b7c028fb74dc5a068cccc # v1.3.4
         with:
           allowed-conclusions: success
-          check-name: "Report"
+          check-name: "Maps the right tested files"
           ref: update
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 10
