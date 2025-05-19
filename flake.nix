@@ -4,8 +4,14 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
-  outputs = { nixpkgs, flake-utils, self, ... }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      nixpkgs,
+      flake-utils,
+      ...
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
       in
@@ -15,24 +21,15 @@
             gnumake
             luajit
             luajitPackages.busted
-            neovim
           ];
         };
         packages = {
           default = pkgs.vimUtils.buildVimPlugin {
-            name = "proximity-nvim";
+            name = "proximity.nvim";
             src = ./.;
             version = "unversioned";
-            propogatedBuildInputs = with pkgs; [
-              luajit
-            ];
           };
         };
-      })
-    //
-      {
-        overlays.default = final: prev: {
-          inherit (self.packages.${prev.system}) default;
-        };
-      };
+      }
+    );
 }
