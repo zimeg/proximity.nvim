@@ -15,6 +15,7 @@ to [Semantic Versioning][semver].
 - Set stable versions of workflow steps with the minimum set of permissions.
 - Update packages of dependencies on a frequent schedule for confident tests.
 - Start tests on a whim with a workflow dispatch option with testing events.
+- Automate incrementations of the open source license to keep things current.
 
 ## [0.1.1] - 2024-12-29
 
