@@ -21,6 +21,7 @@
             gnumake
             luajit
             luajitPackages.busted
+            neovim
           ];
         };
         packages = {
