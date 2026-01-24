@@ -106,8 +106,12 @@ jobs:
       - name: Save the flake locks
         if: steps.diff.outputs.changed == 'true'
         run: |
+          git rev-parse --verify --quiet origin/update >/dev/null &&
+            [ "$(git rev-list --count origin/main..origin/update 2>/dev/null)" -ne 1 ] &&
+            exit 1
+          git switch --force-create update origin/main
           git commit --all --message "chore(deps): automatic version bump to the most recent packages"
-          git push -u origin update
+          git push -f origin update
       - name: Start the tests
         if: steps.diff.outputs.changed == 'true'
         run: |

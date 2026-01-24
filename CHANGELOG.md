@@ -16,6 +16,7 @@ to [Semantic Versioning][semver].
 - Update packages of dependencies on a frequent schedule for confident tests.
 - Start tests on a whim with a workflow dispatch option with testing events.
 - Automate incrementations of the open source license to keep things current.
+- Overwrite failed attempts to update dependencies after waiting some times.
 
 ## [0.1.1] - 2024-12-29
 
