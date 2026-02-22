@@ -7,6 +7,10 @@ to [Semantic Versioning][semver].
 
 ## [Unreleased]
 
+### Documentation
+
+- Replace handle with name of authorship at time of publication in licenses.
+
 ### Maintenance
 
 - Require changes to the changelog before merging changes after development.
