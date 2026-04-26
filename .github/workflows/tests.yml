@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     name: Maps the right tested files
-    runs-on: self-hosted
+    runs-on: tom
     permissions:
       contents: read
     steps:
