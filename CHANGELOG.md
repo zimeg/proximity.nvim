@@ -12,6 +12,7 @@ to [Semantic Versioning][semver].
 - Replace handle with name of authorship at time of publication in licenses.
 
 ### Maintenance
+- Migrate nix dependent workflows to use self hosted runner machines.
 
 - Require changes to the changelog before merging changes after development.
 - Include the packaged plugin as part of the flake package derivation output.
