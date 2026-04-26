@@ -21,6 +21,7 @@ to [Semantic Versioning][semver].
 - Start tests on a whim with a workflow dispatch option with testing events.
 - Automate incrementations of the open source license to keep things current.
 - Overwrite failed attempts to update dependencies after waiting some times.
+- Prefer self hosted runners for nix package installation within a workflow.
 
 ## [0.1.1] - 2024-12-29
 
