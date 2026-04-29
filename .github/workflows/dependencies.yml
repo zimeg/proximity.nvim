@@ -33,24 +33,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
       - name: Start the tests
         run: |
-          gh api \
-            --method POST \
-            -H "Accept: application/vnd.github+json" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            "/repos/$REPO/actions/workflows/tests.yml/dispatches" \
-             -f "ref=$REF"
-        env:
-          GH_TOKEN: ${{ github.token }}
-          REF: ${{ github.head_ref }}
-          REPO: ${{ github.repository }}
-      - name: Wait for tests to succeed
-        uses: lewagon/wait-on-check-action@9312864dfbc9fd208e9c0417843430751c042800 # v1.7.0
-        with:
-          allowed-conclusions: success
-          check-name: "Maps the right tested files"
-          ref: ${{ github.head_ref }}
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 10
+          nix develop -c make test
       - name: Merge requests from the kind dependabot
         if: steps.metadata.outputs.update-type == 'version-update:semver-patch' || steps.metadata.outputs.update-type == 'version-update:semver-minor'
         run: gh pr merge --auto --squash "$PR_URL"
@@ -111,24 +94,7 @@ jobs:
       - name: Start the tests
         if: steps.diff.outputs.changed == 'true'
         run: |
-          gh api \
-            --method POST \
-            -H "Accept: application/vnd.github+json" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            "/repos/$REPO/actions/workflows/tests.yml/dispatches" \
-             -f "ref=update"
-        env:
-          GH_TOKEN: ${{ github.token }}
-          REPO: ${{ github.repository }}
-      - name: Wait for tests to succeed
-        if: steps.diff.outputs.changed == 'true'
-        uses: lewagon/wait-on-check-action@9312864dfbc9fd208e9c0417843430751c042800 # v1.7.0
-        with:
-          allowed-conclusions: success
-          check-name: "Maps the right tested files"
-          ref: update
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 10
+          nix develop -c make test
       - name: Save changed version
         if: steps.diff.outputs.changed == 'true'
         run: |

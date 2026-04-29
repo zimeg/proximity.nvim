@@ -22,6 +22,7 @@ to [Semantic Versioning][semver].
 - Automate incrementations of the open source license to keep things current.
 - Overwrite failed attempts to update dependencies after waiting some times.
 - Prefer self hosted runners for nix package installation within a workflow.
+- Test updates to dependencies inline to avoid overhead of multiple runners.
 
 ## [0.1.1] - 2024-12-29
 
