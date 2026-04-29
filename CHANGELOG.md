@@ -13,6 +13,7 @@ to [Semantic Versioning][semver].
 
 ### Maintenance
 
+- Test dependency updates inline to avoid overhead of multiple pending runner at once.
 - Require changes to the changelog before merging changes after development.
 - Include the packaged plugin as part of the flake package derivation output.
 - Remove flake utilities from build inputs for a more minimal configuration.
